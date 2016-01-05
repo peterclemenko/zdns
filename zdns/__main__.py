@@ -9,13 +9,14 @@ import multiprocessing
 from multiprocessing import Pool
 
 from mx import mx_lookup
+from axfr import axfr_lookup
 
 LOOKUP_FUNCTIONS = {
     "mx":mx_lookup,
 #    "a":a_looup,
 #    "spf":spf_lookup,
 #    "dmarc":dmarc_lookup,
-#    "axfr":afxr_lookup
+    "axfr":axfr_lookup
 }
 
 # this setup isn't particularly scalable. all names are loaded
