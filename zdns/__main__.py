@@ -11,12 +11,13 @@ from multiprocessing import Pool
 from mx import mx_lookup
 from axfr import axfr_lookup
 from spf import spf_lookup
+from dmarc import dmarc_lookup
 
 LOOKUP_FUNCTIONS = {
     "mx":mx_lookup,
 #    "a":a_looup,
     "spf":spf_lookup,
-#    "dmarc":dmarc_lookup,
+    "dmarc":dmarc_lookup,
     "axfr":axfr_lookup
 }
 
