@@ -50,7 +50,7 @@ def axfr_lookup(domain, rank, lock, timeout):
             try:
                 entry['pretty_rdclass'] = dns.rdataclass.to_text(rdata.rdclass)
                 entry['pretty_rdtype'] = dns.rdatatype.to_text(rdata.rdtype)
-                parent = dns.name.Name(name.split('.'))
+                parent = dns.name.Name(domain.split('.'))
                 if name == dns.name.empty:
                     entry['pretty_name'] = parent.to_text()
                 else:
